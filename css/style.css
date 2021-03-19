@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.container {
+    width: fit-content;
+    height: 800px;
+    color: white;
+    background: rgb(2, 41, 37);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 4px 50px black;
+}
+table{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    position: ;
+    bottom: 0;
+}
+
+#equalSign {
+    background:rgb(24, 168, 154);
+    width: fit-content;
+}
+
+td{
+    width: fit-content;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    width: 100px;
+    font-size: 50px;
+    background: transparent;
+    color: white;
+}
+
+button:hover{
+    color: 
+}
