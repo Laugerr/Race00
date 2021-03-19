@@ -2,28 +2,25 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 200px;
+    background: rgba(238, 130, 238, 0.192);
 }
 
 .container {
     width: fit-content;
     height: 800px;
     color: white;
-    background: rgb(2, 41, 37);
+    background: rgb(12, 38, 46);
     padding: 20px;
     text-align: center;
     box-shadow: 2px 4px 50px black;
 }
-table{
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    position: ;
-    bottom: 0;
+#keyboard {
+    align-self: flex-end;
 }
 
 #equalSign {
     background:rgb(24, 168, 154);
-    width: fit-content;
+    border-radius: 50px;
 }
 
 td{
@@ -37,8 +34,42 @@ button {
     font-size: 50px;
     background: transparent;
     color: white;
+    border-radius: 50px;
 }
 
 button:hover{
-    color: 
+    color: goldenrod;
+    box-shadow: 1px 5px 50px goldenrod;
 }
+
+button:focus {
+    outline:  none;
+    color: tomato;
+}
+
+#equalSign:hover {
+    box-shadow: none;
+}
+
+#calculator{
+    height: 250px;
+    background: white;
+    color: black;
+}
+
+#history {
+    padding:10px 50px;
+    text-align: right;
+    color: gray;
+    font-size: 30px;
+}
+
+
+#output {
+    text-align: right;
+    padding:10px 50px;
+    font-size: 60px;
+    position: relative;
+    top: 5px;
+}
+
