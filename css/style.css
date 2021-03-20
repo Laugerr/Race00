@@ -1,75 +1,99 @@
 body{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
     background: rgba(238, 130, 238, 0.192);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: fit-content;
-    height: 800px;
+    height: fit-content;
     color: white;
     background: rgb(12, 38, 46);
     padding: 20px;
     text-align: center;
-    box-shadow: 2px 4px 50px black;
+    box-shadow: 2px 4px 30px black;
 }
-#keyboard {
-    align-self: flex-end;
+table tr td{
+    border-collapse: collapse;
 }
-
-#equalSign {
-    background:rgb(24, 168, 154);
-    border-radius: 50px;
-}
-
-td{
+td, tr {
     width: fit-content;
+    border-radius: 10px;
 }
 
 button {
     padding: 20px;
     border: none;
     width: 100px;
-    font-size: 50px;
+    font-size: 30px;
     background: transparent;
     color: white;
-    border-radius: 50px;
+    border-radius: 5px;
 }
-
+.num {
+    font-size: 40px;
+}
+.toCreative {
+    font-size: 50px;
+    padding: 10px;
+}
 button:hover{
     color: goldenrod;
-    box-shadow: 1px 5px 50px goldenrod;
+    box-shadow: 1px 5px 20px gray;
 }
 
 button:focus {
+    transition: .3s ease-in-out;
     outline:  none;
     color: tomato;
 }
-
-#equalSign:hover {
-    box-shadow: none;
+.action {
+    color: goldenrod;
+}
+.creative {
+    transition: 0.5s ease-in-out;
+    display: none;
 }
 
-#calculator{
-    height: 250px;
+#equalSign {
+    background:rgb(24, 168, 154);
+    border-radius: 10px;
+}
+#equalSign button {
+    width: 100%;
+    font-size: 40px;
+}
+
+
+.calculator{
+    height: 210px;
     background: white;
     color: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
-#history {
-    padding:10px 50px;
+.history {
     text-align: right;
     color: gray;
     font-size: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
-
-
-#output {
-    text-align: right;
-    padding:10px 50px;
-    font-size: 60px;
-    position: relative;
-    top: 5px;
+.output {
+    margin-bottom: 20px;
 }
-
+input, input:focus {
+    width: 90%;
+    border: none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+    outline: none;
+    text-align: end;
+    font-size: 40px;
+}
