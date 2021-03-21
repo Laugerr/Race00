@@ -83,11 +83,37 @@
         </div>
         <div class="convertors">
             <ul>
-                <li class="length_li" onclick=""><img src="https://img.icons8.com/ios/452/length.png" alt="length" class="length_img"></li>
+                <li class="length_li" onclick="lengthConv()"><img src="https://img.icons8.com/ios/452/length.png" alt="length" class="length_img"></li>
                 <li class="wight_li" onclick=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Vector-kilogram_weight.svg/1200px-Vector-kilogram_weight.svg.png" alt="wight" class="wight_img"></li>
                 <li class="square_li" onclick=""><img src="https://svgsilh.com/svg_v2/1327145.svg" alt="square" class="square_img"></li>
             </ul>
         </div>
         </main>
+        <div class="lenth">
+            <div class="length_div">
+                <label>Feet</label>
+                <input id="inputFeet"  type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="length_div">
+                <label>Meters</label>
+                <input id="inputMeters"  type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="length_div">
+                <label>cm</label>
+                <input id="inputcm"  type="number" placeholder="cm" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="length_div">
+                <label>Yards</label>
+                <input id="inputYards"  type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="length_div">
+                <label>Kilometers</label>
+                <input id="inputKilometers"  type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+            <div class="length_div">
+                <label>Miles</label>
+                <input id="inputMiles"  type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+            </div>
+        </div>
     </body>
 </html>

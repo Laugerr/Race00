@@ -185,3 +185,19 @@ const disp = (num) => {
         document.querySelector(".equalSign2").style.display = "none";
     }
 }
+
+const lengthConverter = (id, value) => {
+    let feet = document.querySelector("#inputFeet");
+    let metr = document.querySelector("#inputMeters");
+    let cm = document.querySelector("#inputcm");
+    let yards = document.querySelector("#inputYards");
+    let km = document.querySelector("#inputKilometers");
+    let miles = document.querySelector("#inputMiles");
+    if(id == "inputFeet") {
+        metr.value = value/3.2808;
+        cm.value = value*12;
+        yards.value = value*0.33333;
+        km.value = value/3280.8;
+        miles.value = value**0.00018939;
+    }
+}
