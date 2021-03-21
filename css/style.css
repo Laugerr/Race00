@@ -2,12 +2,23 @@ body{
     background: rgba(238, 130, 238, 0.192);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.container {
+main {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
     width: fit-content;
     height: fit-content;
     color: white;
@@ -15,6 +26,27 @@ body{
     padding: 20px;
     text-align: center;
     box-shadow: 2px 4px 30px black;
+    border-radius: 10px;
+}
+.convertors {
+    background-color: rgb(12, 38, 46);
+    border-top-right-radius: 10px;
+    padding: 10px 0px;
+    border-bottom-right-radius: 10px;
+}
+.convertors ul {
+    list-style-type: none;
+}
+.convertors ul li img{
+    width: 50px;
+    height: 50px;
+}
+.convertors ul li{
+    padding: 10px 5px;
+}
+.convertors ul li:hover{
+    border-radius: 5px;
+    background-color: rgb(32, 82, 97);
 }
 table tr td{
     border-collapse: collapse;
@@ -53,21 +85,25 @@ button:focus {
 .action {
     color: goldenrod;
 }
-.creative {
-    transition: 0.5s ease-in-out;
+.creative, .binary_td, .let_td {
     display: none;
 }
 
-#equalSign {
+.equalSign, .equalSign2 {
     background:rgb(24, 168, 154);
     border-radius: 10px;
 }
-#equalSign button {
+.equalSign button, .equalSign2 button{
     width: 100%;
     font-size: 40px;
 }
 
-
+.keyboard {
+    width: fit-content;
+}
+.num {
+    width: 90%;
+}
 .calculator{
     height: 210px;
     background: white;
@@ -75,25 +111,41 @@ button:focus {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .history {
     text-align: right;
     color: gray;
-    font-size: 30px;
     margin-top: 10px;
     margin-right: 10px;
 }
 .output {
     margin-bottom: 20px;
+    width: 100%;
 }
-input, input:focus {
-    width: 90%;
+#output-value, #history-value {
     border: none;
-    background-image:none;
-    background-color:transparent;
     box-shadow: none;
     outline: none;
     text-align: end;
-    font-size: 40px;
+}
+#history-value {
+    font-size: 25px;
+}
+#output-value {
+    font-size: 32px;
+}
+
+#system {
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    font-size: 35px;
+    color: goldenrod;
+    cursor: pointer;
+    text-align: center;
+    background: #2c3e50;
+    border-radius: 5px;
 }

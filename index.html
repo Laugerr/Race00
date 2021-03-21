@@ -8,19 +8,28 @@
         <script src="js/script.js" defer></script>
     </head>
     <body>
+        <main>
         <div class="container">
             <div class="calculator">
                 <div class="history">
-                    <label id="history-value"></label>
+                    <input id="history-value" disabled>
                 </div>
                 <div class="output">
                     <input id="output-value" type="text" placeholder="0">
                 </div>
             </div>
             <div class="keyboard">
-                <table>
+                <table class="calculator_table">
                     <tr calss="creative">
-                        <td><button class="action creative">Sys</button></td>
+                        <td>
+                            <div class="creative">
+                                <select id="system" name="cars">
+                                    <option value="Dec">Dec</option>
+                                    <option value="Hex">Hex</option>
+                                    <option value="Bin">Bin</option>
+                                </select>
+                            </div>
+                        </td>
                         <td><button class="action creative" onclick="MR()">MR</button></td>
                         <td><button class="action creative" onclick="MC()">MC</button></td>
                         <td><button class="action creative" onclick="M_Plus()">M+</button></td>
@@ -34,33 +43,51 @@
                         <td><button class="action creative" onclick="degree()">&and;</button></td>
                     </tr>
                     <tr>
-                        <td><button class="num">7</button></td>
-                        <td><button class="num">8</button></td>
-                        <td><button class="num">9</button></td>
+                        <td class="binary_td"><button class="num binary_num">0</button></td>
+                        <td class="binary_td"><button class="num binary_num">1</button></td>
+                        <td class="num_td"><button class="num">7</button></td>
+                        <td class="num_td"><button class="num">8</button></td>
+                        <td class="num_td"><button class="num">9</button></td>
+                        <td class="let_td"><button class="let">A</button></td>
+                        <td class="let_td"><button class="let">D</button></td>
                         <td><button class="action">*</button></td>
                         <td><button class="action creative" onclick="fact()">x!</button></td>
                     </tr>
                     <tr>
-                        <td><button class="num">4</button></td>
-                        <td><button class="num">5</button></td>
-                        <td><button class="num">6</button></td>
+                        <td class="num_td"><button class="num">4</button></td>
+                        <td class="num_td"><button class="num">5</button></td>
+                        <td class="num_td"><button class="num">6</button></td>
+                        <td class="let_td"><button class="let">B</button></td>
+                        <td class="let_td"><button class="let">E</button></td>
                         <td><button class="action">+</button></td>
                         <td><button class="action creative" onclick="sqr()">&radic;</button></td>
                     </tr>
                     <tr>
-                        <td><button class="num">1</button></td>
-                        <td><button class="num">2</button></td>
-                        <td><button class="num">3</button></td>
+                        <td class="num_td"><button class="num">1</button></td>
+                        <td class="num_td"><button class="num">2</button></td>
+                        <td class="num_td"><button class="num">3</button></td>
+                        <td class="let_td"><button class="let">C</button></td>
+                        <td class="let_td"><button class="let">E</button></td>
+
                         <td><button class="action">-</button></td>
+                        <td class="equalSign2" onclick="calc()" style="display: none;"><button>&#61;</button></td>
                     </tr>
                     <tr>
                         <td><button class="toCreative" onclick="toCreativeMode()">&Colon;</button></td>
-                        <td><button class="num">0</button></td>
-                        <td><button class="dot" onclick="putDot()">.</button></td>
-                        <td id="equalSign" onclick="calc()"><button>&#61;</button></td>
+                        <td class="num_td"><button class="num">0</button></td>
+                        <td class="dot_td"><button class="dot" onclick="putDot()">.</button></td>
+                        <td class="equalSign" onclick="calc()"><button>&#61;</button></td>
                     </tr>
                 </table>
             </div>
         </div>
+        <div class="convertors">
+            <ul>
+                <li class="length_li" onclick=""><img src="https://img.icons8.com/ios/452/length.png" alt="length" class="length_img"></li>
+                <li class="wight_li" onclick=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Vector-kilogram_weight.svg/1200px-Vector-kilogram_weight.svg.png" alt="wight" class="wight_img"></li>
+                <li class="square_li" onclick=""><img src="https://svgsilh.com/svg_v2/1327145.svg" alt="square" class="square_img"></li>
+            </ul>
+        </div>
+        </main>
     </body>
 </html>

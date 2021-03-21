@@ -3,6 +3,7 @@ let creativeMode = false;
 let outputVal = document.querySelector("#output-value");
 let historyVal = document.querySelector("#history-value");
 var Memory = 0;
+let selectedSys = 0;
 
 const toCreativeMode = () => {
     let btn = document.querySelector(".toCreative");
@@ -18,9 +19,9 @@ const toCreativeMode = () => {
             } 
         });
         btn.innerHTML = "&larrhk;";
-        let eq = document.querySelector("#equalSign");
+        let eq = document.querySelector(".equalSign");
         eq.setAttribute("colspan", "2");
-    } else {
+    } else if(selectedSys == 0) {
         creativeMode = false;
         let creativeList = document.querySelectorAll(".creative");
         creativeList.forEach(elem => {
@@ -48,7 +49,7 @@ const putDot = () => {
     }
 }
 const calc = () => {
-    historyVal.innerHTML =  outputVal.value + "=" + eval(outputVal.value);
+    historyVal.value =  outputVal.value + "=" + eval(outputVal.value);
     outputVal.value = eval(outputVal.value);
 }
 
@@ -66,7 +67,7 @@ const percent = () => {
                     break;
                 }
             }
-            historyVal.innerHTML = outputVal.value.slice(0, i+1) + num2*(num1/100) + "=" + eval(outputVal.value.slice(0, i+1) + num2*(num1/100));
+            historyVal.value = outputVal.value.slice(0, i+1) + num2*(num1/100) + "=" + eval(outputVal.value.slice(0, i+1) + num2*(num1/100));
             outputVal.value = eval(outputVal.value.slice(0, i+1) + num2*(num1/100));
             break;
         }
@@ -84,12 +85,12 @@ const MC = () => {
 }
 
 const M_Minus = () => {
-    historyVal.innerHTML = outputVal.value + "-" + Memory + "=" + (eval(outputVal.value)-Memory);
+    historyVal.value = outputVal.value + "-" + Memory + "=" + (eval(outputVal.value)-Memory);
     Memory = eval(outputVal.value) - Memory;
     outputVal.value = Memory;
 }
 const M_Plus = () =>  {
-    historyVal.innerHTML = outputVal.value + "+" + Memory + "=" + (eval(outputVal.value)+Memory);
+    historyVal.value = outputVal.value + "+" + Memory + "=" + (eval(outputVal.value)+Memory);
     Memory = eval(outputVal.value) + Memory;
     outputVal.value = Memory;
 }
@@ -101,11 +102,11 @@ const fact = () => {
     for(let a = 1; a <= eval(outputVal.value); a++){
         res*=a;
     }
-    historyVal.innerHTML = "(" + outputVal.value + ")! =" + res;
+    historyVal.value = "(" + outputVal.value + ")! =" + res;
     outputVal.value = res;
 }
 const sqr = () => {
-    historyVal.innerHTML = "√(" + outputVal.value + ") =" + Math.sqrt(eval(outputVal.value));
+    historyVal.value = "√(" + outputVal.value + ") =" + Math.sqrt(eval(outputVal.value));
     outputVal.value = Math.sqrt(eval(outputVal.value));
 }
 
@@ -125,3 +126,62 @@ document.querySelectorAll('.action').forEach(button => {
     })
 })
 
+document.getElementById("system").onchange = function() {
+    let idx = document.getElementById("system").selectedIndex;
+    selectedSys = idx;
+    disp(idx);
+}
+
+const disp = (num) => {
+    if(num === 2) {
+        document.querySelectorAll(".let_td").forEach(bin => {
+            bin.style.display = "none";
+        })
+        document.querySelectorAll('.num_td').forEach(num => {
+            num.style.display = "none";
+        });
+        document.querySelector('.dot_td').style.display = "none";
+        document.querySelectorAll(".binary_td").forEach(bin => {
+            bin.style.display = "table-cell";
+            bin.setAttribute("colspan", "1");
+            bin.setAttribute("rowspan", "3");
+        })
+        let eq = document.querySelector(".equalSign");
+        eq.style.display = "none";
+        let btn = document.querySelector(".toCreative");
+        btn.style.display = "none";
+        document.querySelector(".equalSign2").style.display = "table-cell";
+        document.querySelector(".equalSign2").setAttribute("colspan", "2");
+    } else if (num == 1) {
+        document.querySelectorAll('.num_td').forEach(num => {
+            num.style.display = "table-cell";
+        });
+        document.querySelectorAll(".binary_td").forEach(bin => {
+            bin.style.display = "none";
+        })
+        document.querySelector('.dot_td').style.display = "none";
+        document.querySelectorAll(".let_td").forEach(bin => {
+            bin.style.display = "table-cell";
+        })
+        document.querySelector(".equalSign2").style.display = "none";
+        document.querySelector(".equalSign").style.display = "table-cell";
+        document.querySelector(".equalSign").setAttribute("colspan", "3");
+        document.querySelector(".toCreative").style.display = "none";
+    } else {
+        document.querySelectorAll('.num_td').forEach(num => {
+            num.style.display = "table-cell";
+        });
+        document.querySelector('.dot_td').style.display = "table-cell";
+        document.querySelectorAll(".binary_td").forEach(bin => {
+            bin.style.display = "none";
+        })
+        document.querySelectorAll(".let_td").forEach(bin => {
+            bin.style.display = "none";
+        })
+        let btn = document.querySelector(".toCreative");
+        btn.style.display = "table-cell";
+        let eq = document.querySelector(".equalSign");
+        eq.style.display = "table-cell";
+        document.querySelector(".equalSign2").style.display = "none";
+    }
+}
