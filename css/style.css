@@ -1,75 +1,173 @@
 body{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
     background: rgba(238, 130, 238, 0.192);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .container {
+    margin-top: 50px;
     width: fit-content;
-    height: 800px;
+    height: fit-content;
     color: white;
     background: rgb(12, 38, 46);
     padding: 20px;
     text-align: center;
-    box-shadow: 2px 4px 50px black;
+    box-shadow: 2px 4px 30px black;
+    border-radius: 10px;
 }
-#keyboard {
-    align-self: flex-end;
+.convertors {
+    background-color: rgb(12, 38, 46);
+    border-top-right-radius: 10px;
+    padding: 10px 0px;
+    border-bottom-right-radius: 10px;
+}
+.convertors ul {
+    list-style-type: none;
+}
+.convertors ul li img{
+    width: 50px;
+    height: 50px;
 }
 
-#equalSign {
-    background:rgb(24, 168, 154);
-    border-radius: 50px;
+
+.convertors ul li:hover{
+    border-radius: 5px;
+    background-color: rgb(32, 82, 97);
 }
 
-td{
+.lenth, .weight {
+    background: rgb(12, 38, 46);
+    border-top-left-radius: 10px;
+    padding: 10px 10px;
+    border-bottom-left-radius: 10px;
+    color: goldenrod;
+    font-size: large;
+}
+
+.lenth input, .weight input {
+    font-size: large;
+    color: #2c3e50;
+}
+
+table tr td{
+    border-collapse: collapse;
+}
+td, tr {
     width: fit-content;
+    border-radius: 10px;
 }
 
 button {
     padding: 20px;
     border: none;
     width: 100px;
-    font-size: 50px;
+    font-size: 30px;
     background: transparent;
     color: white;
     border-radius: 50px;
 }
-
+.num {
+    font-size: 40px;
+}
+.toCreative {
+    font-size: 50px;
+    padding: 10px;
+}
 button:hover{
     color: goldenrod;
-    box-shadow: 1px 5px 50px goldenrod;
+    box-shadow: 1px 5px 20px gray;
 }
 
 button:focus {
+    transition: .3s ease-in-out;
     outline:  none;
     color: tomato;
 }
 
-#equalSign:hover {
-    box-shadow: none;
+
+.creative, .binary_td, .let_td, .lenth, .weight {
+    display: none;
 }
 
-#calculator{
-    height: 250px;
+
+
+.equalSign, .equalSign2 {
+    background:rgb(24, 168, 154);
+    border-radius: 10px;
+}
+
+.equalSign button, .equalSign2 button{
+    width: 100%;
+    font-size: 40px;
+}
+
+
+.keyboard {
+    width: fit-content;
+}
+.num {
+    width: 90%;
+}
+.calculator{
+    height: 210px;
     background: white;
     color: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#history {
-    padding:10px 50px;
+.history {
     text-align: right;
     color: gray;
-    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.output {
+    margin-bottom: 20px;
+    width: 100%;
 }
 
+#output-value, #history-value {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    text-align: end;
+}
+#history-value {
+    font-size: 25px;
+}
+#output-value {
+    font-size: 32px;
+}
 
-#output {
-    text-align: right;
-    padding:10px 50px;
-    font-size: 60px;
-    position: relative;
-    top: 5px;
+#system {
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    font-size: 35px;
+    color: goldenrod;
+    cursor: pointer;
+    text-align: center;
+    background: #2c3e50;
+    border-radius: 5px;
 }
 
