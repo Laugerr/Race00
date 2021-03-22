@@ -9,6 +9,87 @@
     </head>
     <body>
         <main>
+            <!-- -----------------------------------------Length Converter--------------------------------------------------- -->
+            <div class="lenth">
+                <div class="length_div">
+                    <label>Feet</label>
+                    <input id="inputFeet"  type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+                <div class="length_div">
+                    <label>Meters</label>
+                    <input id="inputMeters"  type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+                <div class="length_div">
+                    <label>cm</label>
+                    <input id="inputcm"  type="number" placeholder="cm" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+                <div class="length_div">
+                    <label>Yards</label>
+                    <input id="inputYards"  type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+                <div class="length_div">
+                    <label>Kilometers</label>
+                    <input id="inputKilometers"  type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+                <div class="length_div">
+                    <label>Miles</label>
+                    <input id="inputMiles"  type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+                </div>
+            </div>
+            <!-- -----------------------------------------Weight Converter--------------------------------------------------- -->
+            <div class="weight" id="myDIV">
+                <div class="weight_div">
+                    <label>Once</label>
+                    <input id="inputOnce"  type="number" placeholder="Once" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="weight_div">
+                    <label>Kilogram</label>
+                    <input id="inputKilogram"  type="number" placeholder="Kilogram" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="weight_div">
+                    <label>Pound</label>
+                    <input id="inputPound"  type="number" placeholder="Pound" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="weight_div">
+                    <label>Gram</label>
+                    <input id="inputGram"  type="number" placeholder="Gram" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="weight_div">
+                    <label>Tonne</label>
+                    <input id="inputTonne"  type="number" placeholder="Tonne" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+                <div class="weight_div">
+                    <label>Stone</label>
+                    <input id="inputStone"  type="number" placeholder="Stone" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+                </div>
+            </div>
+             <!-- -----------------------------------------Square Converter--------------------------------------------------- -->
+             <div class="square">
+                <div class="square_div">
+                    <label>mm <sup>2</sup></label>
+                    <input id="inputMillimeter"  type="number" placeholder="Millimeter^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+                <div class="square_div">
+                    <label>cm <sup>2</sup></label>
+                    <input id="inputCentimeter"  type="number" placeholder="Centimeter^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+                <div class="square_div">
+                    <label>m <sup>2</sup></label>
+                    <input id="inputMeter"  type="number" placeholder="Meter^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+                <div class="square_div">
+                    <label>km <sup>2</sup></label>
+                    <input id="inputKilometer"  type="number" placeholder="Kilometer^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+                <div class="square_div">
+                    <label>yd <sup>2</sup></label>
+                    <input id="inputYard"  type="number" placeholder="Yard^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+                <div class="square_div">
+                    <label>ft <sup>2</sup></label>
+                    <input id="inputFeet2"  type="number" placeholder="Feet^2" oninput="squareConverter(this.id,this.value)" onchange="squareConverter(this.id,this.value)">
+                </div>
+            </div>
         <div class="container">
             <div class="calculator">
                 <div class="history">
@@ -38,9 +119,13 @@
                     <tr>
                         <td><button class="action" onclick="C()">C</button></td>
                         <td><button class="action" onclick="changeSign()">&#177;</button></td>
-                        <td><button class="action" onclick="percent()">%</button></td>
+                        <td class="decimal"><button class="action" onclick="percent()">%</button></td>
                         <td><button class="action">/</button></td>
-                        <td><button class="action creative" onclick="degree()">&and;</button></td>
+                        <td class="binary_td"><button class="action">*</button></td>
+                        <td class="binary_td"><button class="action">+</button></td>
+                        <td class="hex_td"><button class="action">+</button></td>
+                        <td class="hex_td"><button class="action">*</button></td>
+                        <td class="decimal"><button class="action creative" onclick="degree()">&and;</button></td>
                     </tr>
                     <tr>
                         <td class="binary_td"><button class="num binary_num">0</button></td>
@@ -49,18 +134,18 @@
                         <td class="num_td"><button class="num">8</button></td>
                         <td class="num_td"><button class="num">9</button></td>
                         <td class="let_td"><button class="let">A</button></td>
-                        <td class="let_td"><button class="let">D</button></td>
-                        <td><button class="action">*</button></td>
-                        <td><button class="action creative" onclick="fact()">x!</button></td>
+                        <td class="hex_td"><button class="action">-</button></td>
+                        <td class="decimal"><button class="action">*</button></td>
+                        <td class="decimal"><button class="action creative" onclick="fact()">x!</button></td>
                     </tr>
                     <tr>
                         <td class="num_td"><button class="num">4</button></td>
                         <td class="num_td"><button class="num">5</button></td>
                         <td class="num_td"><button class="num">6</button></td>
                         <td class="let_td"><button class="let">B</button></td>
-                        <td class="let_td"><button class="let">E</button></td>
-                        <td><button class="action">+</button></td>
-                        <td><button class="action creative" onclick="sqr()">&radic;</button></td>
+                        <td class="let_td"><button class="let">D</button></td>
+                        <td class="decimal"><button class="action">+</button></td>
+                        <td class="decimal"><button class="action creative" onclick="sqr()">&radic;</button></td>
                     </tr>
                     <tr>
                         <td class="num_td"><button class="num">1</button></td>
@@ -68,12 +153,12 @@
                         <td class="num_td"><button class="num">3</button></td>
                         <td class="let_td"><button class="let">C</button></td>
                         <td class="let_td"><button class="let">E</button></td>
-
-                        <td><button class="action">-</button></td>
+                        <td class="hex_td_none"><button class="action">-</button></td>
                         <td class="equalSign2" onclick="calc()" style="display: none;"><button>&#61;</button></td>
                     </tr>
                     <tr>
-                        <td><button class="toCreative" onclick="toCreativeMode()">&Colon;</button></td>
+                        <td class="let_td"><button class="let">F</button></td>
+                        <td class="creativeSign"><button class="toCreative" onclick="toCreativeMode()">&Colon;</button></td>
                         <td class="num_td"><button class="num">0</button></td>
                         <td class="dot_td"><button class="dot" onclick="putDot()">.</button></td>
                         <td class="equalSign" onclick="calc()"><button>&#61;</button></td>
@@ -83,37 +168,11 @@
         </div>
         <div class="convertors">
             <ul>
-                <li class="length_li" onclick="lengthConv()"><img src="https://img.icons8.com/ios/452/length.png" alt="length" class="length_img"></li>
-                <li class="wight_li" onclick=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Vector-kilogram_weight.svg/1200px-Vector-kilogram_weight.svg.png" alt="wight" class="wight_img"></li>
-                <li class="square_li" onclick=""><img src="https://svgsilh.com/svg_v2/1327145.svg" alt="square" class="square_img"></li>
+                <li class="length_li"><button onclick="lengthConv()"><img src="https://img.icons8.com/ios/452/length.png" alt="length" class="length_img"></button></li>
+                <li class="weight_li"><button onclick="weightConv()"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Vector-kilogram_weight.svg/1200px-Vector-kilogram_weight.svg.png" alt="wight" class="wight_img"></button></li>
+                <li class="square_li"><button onclick="squareConv()"><img src="https://svgsilh.com/svg_v2/1327145.svg" alt="square" class="square_img"></button></li>
             </ul>
         </div>
-        </main>
-        <div class="lenth">
-            <div class="length_div">
-                <label>Feet</label>
-                <input id="inputFeet"  type="number" placeholder="Feet" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-            <div class="length_div">
-                <label>Meters</label>
-                <input id="inputMeters"  type="number" placeholder="Meters" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-            <div class="length_div">
-                <label>cm</label>
-                <input id="inputcm"  type="number" placeholder="cm" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-            <div class="length_div">
-                <label>Yards</label>
-                <input id="inputYards"  type="number" placeholder="Yards" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-            <div class="length_div">
-                <label>Kilometers</label>
-                <input id="inputKilometers"  type="number" placeholder="Kilometers" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-            <div class="length_div">
-                <label>Miles</label>
-                <input id="inputMiles"  type="number" placeholder="Miles" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
-            </div>
-        </div>
+    </main>
     </body>
 </html>

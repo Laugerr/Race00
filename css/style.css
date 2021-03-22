@@ -2,6 +2,7 @@ body{
     background: rgba(238, 130, 238, 0.192);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 main {
     position: absolute;
     top: 50%;
@@ -12,6 +13,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +21,7 @@ main {
 }
 
 .container {
+    margin-top: 50px;
     width: fit-content;
     height: fit-content;
     color: white;
@@ -41,13 +44,27 @@ main {
     width: 50px;
     height: 50px;
 }
-.convertors ul li{
-    padding: 10px 5px;
-}
+
+
 .convertors ul li:hover{
     border-radius: 5px;
     background-color: rgb(32, 82, 97);
 }
+
+.lenth, .weight, .square{
+    background: rgb(12, 38, 46);
+    border-top-left-radius: 10px;
+    padding: 10px 10px;
+    border-bottom-left-radius: 10px;
+    color: goldenrod;
+    font-size: large;
+}
+
+.lenth input, .weight input, .square input {
+    font-size: large;
+    color: #2c3e50;
+}
+
 table tr td{
     border-collapse: collapse;
 }
@@ -63,7 +80,7 @@ button {
     font-size: 30px;
     background: transparent;
     color: white;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 .num {
     font-size: 40px;
@@ -82,21 +99,24 @@ button:focus {
     outline:  none;
     color: tomato;
 }
-.action {
-    color: goldenrod;
-}
-.creative, .binary_td, .let_td {
+
+
+.creative, .binary_td, .let_td, .lenth, .weight, .hex_td {
     display: none;
 }
+
+
 
 .equalSign, .equalSign2 {
     background:rgb(24, 168, 154);
     border-radius: 10px;
 }
+
 .equalSign button, .equalSign2 button{
     width: 100%;
     font-size: 40px;
 }
+
 
 .keyboard {
     width: fit-content;
@@ -124,6 +144,7 @@ button:focus {
     margin-bottom: 20px;
     width: 100%;
 }
+
 #output-value, #history-value {
     border: none;
     box-shadow: none;
@@ -149,3 +170,4 @@ button:focus {
     background: #2c3e50;
     border-radius: 5px;
 }
+
