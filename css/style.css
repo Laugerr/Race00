@@ -51,7 +51,7 @@ main {
     background-color: rgb(32, 82, 97);
 }
 
-.lenth, .weight {
+.lenth, .weight, .square{
     background: rgb(12, 38, 46);
     border-top-left-radius: 10px;
     padding: 10px 10px;
@@ -60,7 +60,7 @@ main {
     font-size: large;
 }
 
-.lenth input, .weight input {
+.lenth input, .weight input, .square input {
     font-size: large;
     color: #2c3e50;
 }
@@ -101,7 +101,7 @@ button:focus {
 }
 
 
-.creative, .binary_td, .let_td, .lenth, .weight {
+.creative, .binary_td, .let_td, .lenth, .weight, .hex_td {
     display: none;
 }
 
